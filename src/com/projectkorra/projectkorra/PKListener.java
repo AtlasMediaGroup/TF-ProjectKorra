@@ -1230,6 +1230,12 @@ public class PKListener implements Listener {
 					player.sendMessage(ChatColor.translateAlternateColorCodes('&', bottomBorder));
 				}
 			}, 20 * 4);
+
+			// TFM Start - make players invincible by default
+			if (!Commands.invincible.contains(player.getName())) {
+				Commands.invincible.add(player.getName());
+			}
+			// TFM End
 		}
 	}
 
